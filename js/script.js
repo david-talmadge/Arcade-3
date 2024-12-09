@@ -4,6 +4,7 @@
       var ties = 0;
       let ggWins = 0;
       let ggLosses = 0;
+      var choices = ['Bear', 'Ninja', 'Hunter'];
       function guessingGame(){
         if(name===''||name===null)name = prompt('Please enter your name. ');
         console.log(name);
@@ -122,7 +123,6 @@
             }
       }
 
-      var choices = ['Bear', 'Ninja', 'Hunter'];
       function bnh(){
         if(name===''||name===null)name = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
         alert(`Hi ${name} Let's Play!!`);
