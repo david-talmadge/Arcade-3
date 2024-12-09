@@ -260,7 +260,7 @@
                   <td>${totalGamesPlayed}</td>
                   <td>${wins}</td>
                   <td>${percentWins}%</td>
-                  <td>${badge}%</td>
+                  <td>${badge}</td>
             </tr>
             </table>`;
             document.getElementById("d2").innerHTML = resultTable;
