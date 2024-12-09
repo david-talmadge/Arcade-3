@@ -232,16 +232,35 @@
       function displaySessionStats(){
             let totalGamesPlayed = wins+losses+ties;
             let percentWins = ((wins/(wins+losses+ties))*100).toFixed();
+            let badge = 'Stone';
+            switch(true){
+                  case percentWins>=0&&percentWins<=25:
+                        badge='Stone';
+                        break;
+                  case percentWins>25&&percentWins<=50:
+                        badge='Bronze';
+                        break;
+                  case percentWins>50&&percentWins<=75:
+                        badge='Iron';
+                        break;
+                  case percentWins>75&&percentWins<=100:
+                        badge='Silicon';
+                        break;
+                  default:
+                        badge='Stone';
+            }
             let resultTable = `<table class="resultsTable" align="center">
             <tr>
                   <th>Total Games Played</th>
                   <th>Total Wins</th>
                   <th>Winrate</th>
+                  <th>Badge Awarded</th>
             </tr>
             <tr align="center">
                   <td>${totalGamesPlayed}</td>
                   <td>${wins}</td>
                   <td>${percentWins}%</td>
+                  <td>${badge}%</td>
             </tr>
             </table>`;
             document.getElementById("d2").innerHTML = resultTable;
